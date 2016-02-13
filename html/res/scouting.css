@@ -1,0 +1,66 @@
+#columnContainer {
+    column-width: 20em;
+    -webkit-column-width: 20em;
+    -moz-column-width: 20em;
+    padding-top: 0.25em;
+}
+
+#statusText {
+    background-color: #f0f0f0;
+}
+
+#showContent {
+    display: none;
+}
+
+#versionString {
+    font-style: italic;
+}
+
+td {
+    padding: 2px 2px;
+}
+
+.atomic {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.formblock {
+    margin: 1em 0;
+}
+
+/* input[type=text]:not(old) { */
+.button {
+    background-color: #f5f5f5; /* TODO: change this */
+    border: 2px solid #f0f0f0;
+}
+
+.padblock {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+fieldset { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    margin-bottom: 0.5em;
+
+    border: 2px solid;
+    border-color: #f0f0f0;
+    padding-bottom: 0.25em;
+}
+
+a { cursor: pointer; color: blue; }
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>FIRST 3512 Spartatroniks Scouting Form</title>
+<link rel="stylesheet" href="/res/scouting.css">
+<link rel="stylesheet" href="/res/markdown.css">
+<script src="/res/scouting.js" type="text/javascript"></script>
+<script src="/res/scouting-test.js" type="text/javascript"></script>
+<script src="/version.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+</head>
+
+<body onload="onLoad()">
+
+<h2>FIRST 3512 Spartatroniks Scouting Form</h2>
+<div><span id="versionString"></span> (Git)</div>
+<div id="statusText"><br></div>
+
+<div id="columnContainer">
+<div class="atomic">
+<fieldset>
+<h3>Match Information</h3>
+<div class="formblock">
+<div>Match #</div>
+<input type="number" name="f_matchNumber">
+</div>
+<div class="formblock">
+<div>Team #</div>
+<input type="number" name="f_teamNumber">
+</div>
+</fieldset>
+</div>
+
+<div class="atomic">
+<fieldset>
+<h3>Autonomous</h3>
+<div class="formblock">
+<div># of Yellow Totes in Auto Zone</div>
+<input type="radio" name="f_numAutoZone" value="0">0
+<input type="radio" name="f_numAutoZone" value="1">1
+<input type="radio" name="f_numAutoZone" value="2">2
+<input type="radio" name="f_numAutoZone" value="3">3
+<input type="radio" name="f_numAutoZone" value="4">4
+</div>
+
+<div class="formblock">
+<div># of Bins moved from Staging Area</div>
+<input type="radio" name="f_numStageBin" value="0">0
+<input type="radio" name="f_numStageBin" value="1">1
+<input type="radio" name="f_numStageBin" value="2">2
+<input type="radio" name="f_numStageBin" value="3">3
+<input type="radio" name="f_numStageBin" value="4">4
+</div>
+
+<div class="formblock">
+<div># of Bins moved from Step</div>
+<input type="radio" name="f_numStepBin" value="0">0
+<input type="radio" name="f_numStepBin" value="1">1
+<input type="radio" name="f_numStepBin" value="2">2
+<input type="radio" name="f_numStepBin" value="3">3
+<input type="radio" name="f_numStepBin" value="4">4
+</div>
+
+<div class="formblock">
+<div><input type="checkbox" name="f_robotAuton">Robot Fully in Auto Zone</div>
+<div><input type="checkbox" name="f_toteAuton">Stacked Tote Set</div>
+</div>
+</fieldset>
+</div>
+
+<div class="atomic">
+<fieldset>
+<h3>Teleop - Coopertition</h3>
+<div class="formblock">
+<div># of Totes placed on Step</div>
+<input type="radio" name="f_numOnStep" value="0">0
+<input type="radio" name="f_numOnStep" value="1">1
+<input type="radio" name="f_numOnStep" value="2">2
+<input type="radio" name="f_numOnStep" value="3">3
+</div>
+
+<div class="formblock">
+<div>Stacked on top of how many Totes</div>
+<input type="radio" name="f_numOnTop" value="0">0
+<input type="radio" name="f_numOnTop" value="1">1
+<input type="radio" name="f_numOnTop" value="2">2
+<input type="radio" name="f_numOnTop" value="3">3
+</div>
+</fieldset>
+</div>
+
+<div class="atomic">
+<fieldset>
+<h3>Teleop - Stacked Grey Tote Sets</h3>
+<table>
+<tr><td></td><td>1<sup>st</sup></td><td>2<sup>nd</sup></td><td>3<sup>rd</sup></td><td>4<sup>th</sup></td><td>5<sup>th</sup></td></tr>
+<tr><td>Litter</td><td><input type="checkbox" name="f_1_litter"></td><td><input type="checkbox" name="f_2_litter"></td><td><input type="checkbox" name="f_3_litter"></td><td><input type="checkbox" name="f_4_litter"></td><td><input type="checkbox" name="f_5_litter"></td></tr>
+<tr><td>Can</td><td><input type="checkbox" name="f_1_can"></td><td><input type="checkbox" name="f_2_can"></td><td><input type="checkbox" name="f_3_can"></td><td><input type="checkbox" name="f_4_can"></td><td><input type="checkbox" name="f_5_can"></td></tr>
+<tr><td>6</td><td><input type="radio" name="f_1_ntotes" value="6"></td><td><input type="radio" name="f_2_ntotes" value="6"></td><td><input type="radio" name="f_3_ntotes" value="6"></td><td><input type="radio" name="f_4_ntotes" value="6"></td><td><input type="radio" name="f_5_ntotes" value="6"></td></tr>
+<tr><td>5</td><td><input type="radio" name="f_1_ntotes" value="5"></td><td><input type="radio" name="f_2_ntotes" value="5"></td><td><input type="radio" name="f_3_ntotes" value="5"></td><td><input type="radio" name="f_4_ntotes" value="5"></td><td><input type="radio" name="f_5_ntotes" value="5"></td></tr>
+<tr><td>4</td><td><input type="radio" name="f_1_ntotes" value="4"></td><td><input type="radio" name="f_2_ntotes" value="4"></td><td><input type="radio" name="f_3_ntotes" value="4"></td><td><input type="radio" name="f_4_ntotes" value="4"></td><td><input type="radio" name="f_5_ntotes" value="4"></td></tr>
+<tr><td>3</td><td><input type="radio" name="f_1_ntotes" value="3"></td><td><input type="radio" name="f_2_ntotes" value="3"></td><td><input type="radio" name="f_3_ntotes" value="3"></td><td><input type="radio" name="f_4_ntotes" value="3"></td><td><input type="radio" name="f_5_ntotes" value="3"></td></tr>
+<tr><td>2</td><td><input type="radio" name="f_1_ntotes" value="2"></td><td><input type="radio" name="f_2_ntotes" value="2"></td><td><input type="radio" name="f_3_ntotes" value="2"></td><td><input type="radio" name="f_4_ntotes" value="2"></td><td><input type="radio" name="f_5_ntotes" value="2"></td></tr>
+<tr><td>1</td><td><input type="radio" name="f_1_ntotes" value="1"></td><td><input type="radio" name="f_2_ntotes" value="1"></td><td><input type="radio" name="f_3_ntotes" value="1"></td><td><input type="radio" name="f_4_ntotes" value="1"></td><td><input type="radio" name="f_5_ntotes" value="1"></td></tr>
+<tr><td>0</td><td><input type="radio" name="f_1_ntotes" value="0"></td><td><input type="radio" name="f_2_ntotes" value="0"></td><td><input type="radio" name="f_3_ntotes" value="0"></td><td><input type="radio" name="f_4_ntotes" value="0"></td><td><input type="radio" name="f_5_ntotes" value="0"></td></tr>
+</table>
+</fieldset>
+</div>
+
+<div class="atomic">
+<fieldset>
+<h3>Teleop - Miscellaneous</h3>
+<div class="formblock">
+<div># of Fouls</div>
+<input type="radio" name="f_fouls" value="0">0
+<input type="radio" name="f_fouls" value="1">1
+<input type="radio" name="f_fouls" value="2">2
+<input type="radio" name="f_fouls" value="3">3
+<input type="radio" name="f_fouls" value="4">4 
+</div>
+
+<div class="formblock">
+<div># of Stacks tipped over</div>
+<input type="radio" name="f_stacks" value="0">0
+<input type="radio" name="f_stacks" value="1">1
+<input type="radio" name="f_stacks" value="2">2
+<input type="radio" name="f_stacks" value="3">3
+<input type="radio" name="f_stacks" value="4">4 
+</div>
+
+<div class="formblock">
+<div><input type="checkbox" class="checkbox" name="f_dead">Dead/Disabled</div>
+<div><input type="checkbox" name="f_tipped">Robot tipped over</div>
+<div><input type="checkbox" name="f_tippedOtherRobot">Tipped other robot over</div>
+</div>
+
+<div class="formblock">
+<div>Collected more often from</div>
+<div><input type="radio" name="f_morePlayerStation" value="true">Human Player Station</div>
+<div><input type="radio" name="f_morePlayerStation" value="false">Landfill</div>
+</div>
+</fieldset>
+</div>
+
+<div class="atomic">
+<fieldset>
+<h3>Other</h3>
+<div class="formblock">
+<div>Notes</div>
+<textarea name="f_notes" rows="4" cols="30"></textarea>
+</div>
+<div class="formblock">
+<div>Scouted By</div>
+<input type="text" name="f_scoutName">
+</div>
+</fieldset>
+</div>
+
+<div class="atomic">
+<fieldset>
+<h3>Process data</h3>
+
+<div class="padblock">
+<input type="submit" class="button" value="Store data" onClick="procForm(this.form); window.scrollTo(0, 0);">
+<input type="submit" class="button" value="Clear fields" onClick="uiClearFields();">
+</div>
+
+<div class="padblock">
+<input type="submit" class="button" value="Send data to remote host" onClick="uiSendData();">
+</div>
+
+<div class="padblock">
+<input type="submit" class="button" value="Run test" onClick="test_doTest();">
+</div>
+
+<a id="showLabel" onclick="uiFlipFlopDisplay();">Show more</a>
+
+<div id="showContent">
+
+<div class="padblock">
+<input type="submit" class="button" value="Set remote host" onClick="uiSetRemoteHost();">
+</div>
+
+<div class="padblock">
+<input type="submit" class="button" value="Show raw data" onClick="displayJSON();">
+</div>
+
+<div class="padblock">
+<input type="submit" class="button" value="Clear local storage" onClick="uiResetLocalStorage();">
+</div>
+
+</div>
+
+<!-- <div class="padblock">
+<input type="submit" class="button" value="Reload appcache" onClick="uiReloadAppcache();">
+</div>
+-->
+
+</fieldset>
+</div>
+
+</div>
+
+</body>
+</html>

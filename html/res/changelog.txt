@@ -1,0 +1,6 @@
+1.0.0-6-gaa78dbe
+    * Check for local storage capability in browser and complain loudly if check fails
+    * Patch bug causing significant data loss in backend
+    * Add mechanism for effectively testing platforms (tests 80 entries, following "Supported Platform Testing" in procedures document)
+    * Tested on Chrome / Android 4.4.2, Chromium 40.0.2214.111 / Debian "jessie", Firefox 31.5.0 / Debian "jessie", Safari / iOS 8.2, WebKit / Harmattan 1.2
+

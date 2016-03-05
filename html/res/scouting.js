@@ -1,4 +1,4 @@
-var fieldNames = {'f_matchNumber':'', 'f_teamNumber':'', 'f_numAutoZone':'0', 'f_numStageBin':'0', 'f_numStepBin':'0', 'f_robotAuton':'', 'f_toteAuton':'', 'f_numOnStep':'0', 'f_disabled':'', 'f_ramp':'', 'f_fouls':'0', 'f_stacks':'0', 'f_dead':'', 'f_tipped':'', 'f_tippedOtherRobot':'', 'f_morePlayerStation':'true', 'f_notes':''};
+var fieldNames = {'f_matchNumber':'', 'f_teamNumber':'', 'f_1_portc':'', 'f_2_portc':'', 'f_1_cheval':'', 'f_2_cheval':'', 'f_1_moat':'', 'f_2_moat':'', 'f_1_ramparts':'', 'f_2_ramparts':'', 'f_1_bridge':'', 'f_2_bridge':'', 'f_1_sally':'', 'f_2_sally':'', 'f_1_rock':'', 'f_2_rock':'', 'f_1_lowbar':'', 'f_2_lowbar':'', 'f_numahigh':'', 'f_numalow':'', 'f_numamhigh':'', 'f_numamlow':'', 'f_numport':'', 'f_STUCKport':'', 'f_numcheval':'', 'f_STUCKcheval':'', 'f_nummoat':'', 'f_STUCKmoat':'', 'f_numramparts':'', 'f_STUCKramparts':'', 'f_numbridge':'', 'f_STUCKbridge':'', 'f_numsally':'', 'f_STUCKsally':'', 'f_numrock':'', 'f_STUCKrock':'', 'f_numrough':'', 'f_STUCKrough':'', 'f_numlowbar':'', 'f_STUCKlowbar':'', 'f_goalhigh':'', 'f_goallow':'', 'f_mgoalhigh':'', 'f_mgoallow':'', 'f_captured':'', 'f_scaled':'', 'f_fouls':'', 'f_tfouls':'', 'f_dead':'', 'f_disabled':'', 'f_tipped':'', 'f_fell':'', 'f_notes':''};
 
 function supports_html5_storage() {
   try {
@@ -28,18 +28,6 @@ function marshalData() {
                         map[key] = elms[i].value;
                     }
                 }
-            }
-        }
-    }
-
-    for(i = 1; i < 6; i++) {
-        map['f_' + i + '_litter'] = document.getElementsByName('f_' + i + '_litter')[0].checked;
-        map['f_' + i + '_can'] = document.getElementsByName('f_' + i + '_can')[0].checked;
-
-        elms = document.getElementsByName('f_' + i + '_ntotes');
-        for(n = 0; n < elms.length; n++) {
-            if(elms[n].checked) {
-                map['f_' + i + '_ntotes'] = elms[n].value;
             }
         }
     }
@@ -82,18 +70,6 @@ function clearFields() {
                         elms[i].checked = true;
                     }
                 }
-            }
-        }
-    }
-
-    for(i = 1; i < 6; i++) {
-        document.getElementsByName('f_' + i + '_litter')[0].checked = '';
-        document.getElementsByName('f_' + i + '_can')[0].checked = '';
-
-        elms = document.getElementsByName('f_' + i + '_ntotes');
-        for(n = 0; n < elms.length; n++) {
-            if(elms[n].value == '0') {
-                elms[n].checked = true;
             }
         }
     }
